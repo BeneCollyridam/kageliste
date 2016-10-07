@@ -91,12 +91,12 @@
         let thisWeek = new Date().getWeek()
 
         let nextWeek = () => {
-            thisWeek++
+            thisWeek = thisWeek > 51 ? 1 : thisWeek + 1
             update();
         }
 
         let prevWeek = () => {
-            thisWeek--
+            thisWeek = thisWeek < 2 ? 52 : thisWeek - 1
             update();
         }
 
